@@ -7,6 +7,7 @@ import lombok.Setter;
 import java.util.Set;
 @Getter
 @Setter
+@Table(name = "tipoPokemon")
 @Entity
 public class TipoPokemon {
     @Id
@@ -15,7 +16,7 @@ public class TipoPokemon {
     @Enumerated(EnumType.STRING)
     private NomeTipo nome;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "tipo")
     private Set<Pokemon> pokemonSet;
 
     public enum NomeTipo{
