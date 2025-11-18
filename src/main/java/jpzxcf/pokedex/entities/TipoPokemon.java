@@ -15,7 +15,6 @@ public class TipoPokemon {
     private Long id;
     @Enumerated(EnumType.STRING)
     private NomeTipo nome;
-
     @ManyToMany(mappedBy = "tipo")
     private Set<Pokemon> pokemonSet;
 
